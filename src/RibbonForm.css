@@ -1,0 +1,235 @@
+.ribbon-page {
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f7fa;
+  box-sizing: border-box;
+}
+.bottom-save {
+  margin-top: 16px;
+  text-align: center; /* center horizontally */
+}
+.bottom-save {
+  margin-top: 16px;
+  width: 100%;
+}
+.ribbon-button {
+  background-color: #007bff;   /* Bootstrap blue as default */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ribbon-button:hover {
+  background-color: #0056b3;   /* darker blue on hover */
+}
+
+.ribbon-button:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+/* Full-width button for bottom save */
+.ribbon-button.full-width {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #28a745;  /* ✅ green for Save */
+  color: #fff;
+  border-radius: 6px;
+}
+/* Initial state: hidden and positioned outside */
+.bottom-save button {
+  transform: translateY(100px);  /* start below */
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* When visible */
+.bottom-save button.visible {
+  transform: translateY(0);  /* move to normal position */
+  opacity: 1;
+}
+
+.ribbon-button.full-width:hover {
+  background-color: #218838;  /* darker green on hover */
+}
+
+.ribbon-button.full-width {
+  display: block;
+  width: 100%;      /* full width */
+  padding: 14px;    /* bigger clickable area */
+  font-size: 18px;  /* larger text */
+  text-align: center;
+  border-radius: 6px;
+}
+
+.ribbon-bar {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 0 24px;
+  font-size: 14px;
+}
+
+.ribbon-button {
+  background-color: white;
+  color: #0083b0;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.ribbon-buttons {
+  position: absolute;
+  left: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.ribbon-button .icon {
+  font-size: 16px;
+}
+
+.ribbon-button:hover {
+  background-color: #e0f7ff;
+}
+
+.delivery-note-container {
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.delivery-note-container label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-button-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.delivery-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #0083b0;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.delivery-input:focus {
+  border-color: #00b4db;
+  outline: none;
+  box-shadow: 0 0 6px #00b4db;
+}
+
+.fetch-button {
+  background-color: #0083b0;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.fetch-button:hover:not(:disabled) {
+  background-color: #00b4db;
+}
+
+.fetch-button:disabled {
+  background-color: #a0c7d9;
+  cursor: not-allowed;
+}
+
+.form-content {
+  padding: 20px;
+  max-width: 100%;
+  overflow-x: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 0 auto 40px;
+}
+
+.ortho-table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.ortho-table th,
+.ortho-table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: normal; /* allows wrapping */
+  word-wrap: break-word;
+  vertical-align: middle;
+  user-select: text;
+}
+
+.ortho-table th {
+  background-color: #0083b0;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ortho-table th input {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 12px;
+  margin-top: 6px;
+  box-sizing: border-box;
+}
+
+.ortho-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ortho-table tr:hover {
+  background-color: #e0f7ff;
+  transition: background-color 0.2s ease;
+}

@@ -1,0 +1,279 @@
+.user-form-wrapper {
+  padding: 20px;
+}
+
+.add-btn {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  background: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Table container */
+.user-table-container {
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table structure */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 15px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Table header */
+.user-table thead {
+  background-color: #0066cc;
+  color: white;
+}
+
+.user-table thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table body */
+.user-table tbody tr:nth-child(even) {
+  background-color: #f1f8ff;
+}
+
+.user-table tbody tr:nth-child(odd) {
+  background-color: #eaf4ff;
+}
+
+.user-table td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+/* Hover effect */
+.user-table tbody tr:hover {
+  background-color: #d6eaff;
+  transition: background-color 0.3s ease;
+}
+.filter-input {
+  width: 100%;
+  padding: 5px;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Action button */
+.user-table button {
+  background-color: #ffc107;
+  color: #212529;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.user-table button:hover {
+  background-color: #e0a800;
+}
+.multiselect-wrapper {
+  position: relative;
+}
+
+.dropdown-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.multiselect-dropdown {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1;
+  width: 100%;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;     /* Align checkbox and text vertically */
+  gap: 8px;                /* Space between checkbox and text */
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.checkbox-option input[type="checkbox"] {
+  margin: 0;
+  transform: translateY(1px); /* Adjust slightly if checkbox still looks off */
+}
+.checkbox-option:hover {
+  background-color: #f7f7f7;
+}
+
+.checkbox-option {
+  display: flex;
+  align-items: center;           /* Align checkbox and text vertically */
+  gap: 10px;                     /* Space between checkbox and text */
+  padding: 8px 12px;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 1.2;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.checkbox-option:last-child {
+  border-bottom: none;
+}
+
+.checkbox-option input[type="checkbox"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+/* Role badge styling */
+.role-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: white;
+}
+
+.role-admin {
+  background-color: #6c757d;
+}
+
+.role-rep {
+  background-color: #17a2b8;
+}
+
+.role-repclerk {
+  background-color: #28a745;
+}
+
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.user-form .form-group {
+  margin-bottom: 12px;
+}
+
+.user-form .form-group label {
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.user-form input,
+.user-form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form-buttons button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-buttons button[type="submit"] {
+  background: #28a745;
+  color: white;
+}
+
+.form-buttons button[type="button"] {
+  background: #dc3545;
+  color: white;
+}
+
+/* Admin Actions Section */
+.admin-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 8px;
+}
+
+.update-status-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: white;
+  color: #667eea;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-status-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f8f9fa;
+}
+
+.update-status-btn svg {
+  font-size: 16px;
+}

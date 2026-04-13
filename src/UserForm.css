@@ -1,0 +1,147 @@
+
+  .ribbon {
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    color: white;
+    height: 50px;               /* same height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 0 24px;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  
+  .ribbon-buttons {
+    position: absolute;
+    left: 24px;
+    display: flex;
+    gap: 12px;
+  }
+  
+  .ribbon-buttons button {
+    background-color: white;
+    color: #0083b0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .ribbon-buttons button:hover {
+    background-color: #e0f7ff;
+  }
+  
+  .ribbon h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  
+ /* Apply background color to entire form wrapper */
+.user-form-wrapper {
+    padding: 0px;
+    background: #f0f2f5; /* light blue/grey tone */
+    min-height: 100vh;    /* ensure full screen height */
+  }
+  .multiselect-wrapper {
+    position: relative;
+  }
+  
+  .dropdown-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .multiselect-dropdown {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  .checkbox-option {
+    display: flex;
+    align-items: center;     /* Align checkbox and text vertically */
+    gap: 8px;                /* Space between checkbox and text */
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .checkbox-option input[type="checkbox"] {
+    margin: 0;
+    transform: translateY(1px); /* Adjust slightly if checkbox still looks off */
+  }
+  .checkbox-option:hover {
+    background-color: #f7f7f7;
+  }
+  
+  .checkbox-option {
+    display: flex;
+    align-items: center;           /* Align checkbox and text vertically */
+    gap: 10px;                     /* Space between checkbox and text */
+    padding: 8px 12px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .checkbox-option:last-child {
+    border-bottom: none;
+  }
+  
+  .checkbox-option input[type="checkbox"] {
+    margin: 0;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+  }
+  
+  
+  
+  /* Optional: also give form card a subtle contrast */
+  .userform-form {
+    background: #fefaf6;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .userform-group {
+    margin-bottom: 20px;
+  }
+  
+  .userform-group label {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .userform-group input,
+  .userform-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+  }
+  

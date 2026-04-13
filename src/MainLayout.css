@@ -1,0 +1,244 @@
+/* Main layout */
+.main-layout {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    flex-direction: column; /* vertical stacking: top navbar + content */
+  }
+  
+  /* Top Navbar */
+  .top-navbar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #2c3e50, #34495e);
+    color: white;
+    padding: 0 1rem;
+    height: 60px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+  
+  .top-navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .top-navbar .nav-buttons {
+    display: flex;        /* Horizontally align buttons */
+    align-items: center;
+    gap: 1rem;            /* Space between buttons */
+  }
+  
+  .top-navbar .nav-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    padding: 0rem 1rem;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+  
+  .top-navbar .nav-buttons button:hover {
+    background-color: rgba(255,255,255,0.1);
+  }
+  
+  /* Content area below navbar */
+  .content-area {
+    flex: 1;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Tabs above content */
+  .tabs {
+    display: flex;
+    border-bottom: 0px solid #dee2e6;
+    padding: 0 0 0 0;
+    background-color: #fff;
+    overflow-x: auto;
+  }
+  
+  .tab {
+    background: none;
+    border: none;
+   
+    margin-right: 1rem;
+    color: #6c757d;
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s, color 0.3s;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    color: #007bff;
+    border-bottom: 3px solid #007bff;
+  }
+  
+  .tab:hover {
+    color: #0056b3;
+  }
+  
+  .tab span {
+    margin-left: 8px;
+    color: #dc3545;
+    cursor: pointer;
+  }
+  
+  
+  /* Content inside tab */
+  .tab-content {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  @media (max-width: 768px) {
+    .top-navbar .nav-buttons  {
+      display: flex;
+      flex-direction: column;
+      background-color: #2c3e50;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 300vh;
+      width: 250px;
+      padding: 1rem;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      z-index: 1000;
+      justify-content: flex-start; /* ← align text to the left */
+  text-align: left;
+    }
+  
+    .top-navbar .nav-buttons.open {
+      transform: translateX(0);
+    }
+  
+    .top-navbar .hamburger-btn {
+      display: block;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 1100; /* on top of sidebar */
+    }
+  
+    .top-navbar .logo {
+      z-index: 1100; /* stays visible */
+    }
+  }
+  
+  
+  /* === DESKTOP VIEW === */
+  @media (min-width: 769px) {
+    .top-navbar .hamburger-btn {
+      display: none;
+    }
+  }
+  
+  /* Optional Sidebar CSS - if you want to keep sidebar too */
+  /*
+  .sidebar {
+    width: 240px;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  }
+  
+  .sidebar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .sidebar nav button {
+    background: none;
+    border: none;
+    color: #ecf0f1;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  
+  .sidebar nav button:hover {
+    background-color: #3d566e;
+  }
+  
+  .sidebar .signout-button {
+    margin-top: auto;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .sidebar .signout-button:hover {
+    background-color: #c0392b;
+  }
+  */
+  
+  /* Sidebar toggle and content margin adjustments (if needed) */
+  /*
+  .sidebar-container {
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar-container.closed {
+    transform: translateX(-100%);
+    position: absolute;
+    z-index: 1000;
+  }
+  
+  .sidebar-container.open {
+    transform: translateX(0);
+  }
+  
+  .toggle-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #2c3e50;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    z-index: 1100;
+    cursor: pointer;
+  }
+  
+  .content-area.with-sidebar {
+    margin-left: 240px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .content-area.full-width {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+  }
+  */
+  
