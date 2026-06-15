@@ -60,7 +60,7 @@ function LoginPage() {
         }
         else
       {
-        navigate("/ReviewDN");
+        navigate("/DashBoard");
       }
         
       } else {

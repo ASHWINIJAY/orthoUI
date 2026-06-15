@@ -100,8 +100,13 @@ function RepClerk() {
   };
 
   const handleSysproSave = async () => {
-    const confirmPost = window.confirm("Are you sure you wish to post to syspro?");
-  if (!confirmPost) return;
+    const confirmPost = window.confirm(
+  "Are you sure you wish to post to Syspro?\n\n" +
+  "Warning: Some order lines may be posted to Syspro as Back Orders due to insufficient stock available in the required bin.\n\n" +
+  "Do you want to continue?"
+);
+
+if (!confirmPost) return;
     setSaving(true);
     setLoading(true);
     try {

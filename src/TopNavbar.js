@@ -92,6 +92,10 @@ const toggleAdminMenu = () => {
           <button onClick={() => handleNavigate('Email Setting', '/EmailSettings')}>
             <FaMailchimp className="icon" /> Email Setting
           </button>
+          <hr className="dropdown-divider" />
+          <button onClick={() => handleNavigate('Syspro post logs', '/SysproLogs')}>
+            <FaMailchimp className="icon" /> Syspro Post Logs
+          </button>
         </div>
       )}
     </div>
